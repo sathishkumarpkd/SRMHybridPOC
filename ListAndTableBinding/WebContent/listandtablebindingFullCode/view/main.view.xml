@@ -1,0 +1,95 @@
+<core:View xmlns:core="sap.ui.core" 
+           xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.ui.commons"
+           xmlns:m="sap.m"
+		   controllerName="view.main">
+
+      <Label text="SAP UI5 List example" />
+      
+      <m:List id="list"
+			        headerText="Competitors"
+			  	    items="{ path  : '/DATA/GROUPS',
+			  	             sorter: { path     : 'NAME',
+	                        			descending: false }
+	                   }" >
+		    	<m:StandardListItem title="{NAME}"
+									            counter="{AGE}" />
+	  	</m:List>
+
+
+      <!-- /!\ in case you have define model names, you should specify the model of the list such as
+          items={path: 'modelGroups>/DATA/GROUPS'} -->
+      <m:List id="listNamedModel"
+			        headerText="Competitors (with named model)"
+			  	    items="{ path  : 'model>/DATA/GROUPS',
+			  	             sorter: { path     : 'NAME',
+	                        			descending: true }
+	                   }" >
+		    	<m:StandardListItem title="{model>NAME}"
+									            counter="{model>AGE}" />
+	  	</m:List>
+
+		  <m:Table id="table"
+		           fixedLayout="false"
+		           items="{ path  : '/DATA/GROUPS',
+			  	              sorter: { path     : 'NAME',
+	                        		  	descending: false }
+	                   }" >
+		     <m:headerToolbar>
+						<m:Toolbar>
+							<m:Title text="Competitors" level="H2"/>
+							<m:ToolbarSpacer></m:ToolbarSpacer>
+							<m:Button  icon="sap-icon://download" press="onDataExport" />
+						</m:Toolbar>
+					</m:headerToolbar>
+				    <m:columns>
+				    	<m:Column>
+				        	<m:Text text="Name" />
+						  </m:Column>
+				    	<m:Column>
+				        	<m:Text text="Age" />
+						  </m:Column>
+				    </m:columns>
+				    <m:items>
+				    	<m:ColumnListItem>
+					        <m:cells>
+					        	<m:Text text="{NAME}" />
+					        	<m:Text text="{AGE}" />
+					        </m:cells>
+				        </m:ColumnListItem>	
+				    </m:items>
+		  </m:Table>	
+
+		  	
+		  <m:Table id="tableNamedModel"
+		           fixedLayout="false"
+		           items="{ path  : 'model>/DATA/GROUPS',
+			  	              sorter: { path     : 'NAME',
+	                        		  	descending: true }
+	                   }" >
+		     <m:headerToolbar>
+						<m:Toolbar>
+							<m:Title text="Competitors (with named Model)" level="H2"/>
+							<m:ToolbarSpacer></m:ToolbarSpacer>
+							<m:Button  icon="sap-icon://download" press="onDataExport" />
+						</m:Toolbar>
+					</m:headerToolbar>
+				    <m:columns>
+				    	<m:Column>
+				        	<m:Text text="Name" />
+						  </m:Column>
+				    	<m:Column>
+				        	<m:Text text="Age" />
+						  </m:Column>
+				    </m:columns>
+				    <m:items>
+				    	<m:ColumnListItem>
+					        <m:cells>
+					        	<m:Text text="{model>NAME}" />
+					        	<m:Text text="{model>AGE}" />
+					        </m:cells>
+				        </m:ColumnListItem>	
+				    </m:items>
+		  </m:Table>	
+</core:View>
+	      

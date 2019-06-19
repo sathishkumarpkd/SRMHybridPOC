@@ -1,0 +1,29 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout">
+
+	<l:BlockLayout background="Light">
+		<l:BlockLayoutRow>
+			<l:BlockLayoutCell>
+			
+			<l:HorizontalLayout id="ready2" visible="true"	busyIndicatorDelay='15000'  class="sapUiSmallMargin">
+
+				<l:VerticalLayout id="ready1" visible="true" class="sapUiSmallMargin">
+					<Button text="Say Hello" press=".onShowHello" />
+					<Text text="Hello World" />
+				</l:VerticalLayout>
+
+				<l:HorizontalLayout id="ready" visible="true"	class="sapUiSmallMargin">
+					<Text text="Ok, let's get you started!"
+						class="sapUiTinyMarginEnd" />
+					<Link text="Learn more"
+						href="https://openui5.hana.ondemand.com/" />
+				</l:HorizontalLayout>
+				
+				</l:HorizontalLayout>
+
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
+	</l:BlockLayout>
+
+</mvc:View>

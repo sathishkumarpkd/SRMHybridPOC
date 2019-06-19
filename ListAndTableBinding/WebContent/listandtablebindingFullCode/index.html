@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+            id="sap-ui-bootstrap" 
+            data-sap-ui-resourceroots='{"view": "./"}' 
+            data-sap-ui-theme="sap_bluecrystal" 
+            data-sap-ui-xx-bindingsyntax="complex">
+    </script>
+    <!--
+   <script src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-resourceroots='{"view": "./"}'
+            data-sap-ui-libs="sap.ui.commons"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-xx-bindingSyntax="complex">
+    </script>
+  -->
+  
+    <script>
+    // Best practice would be to set this stuff up in an Component.js
+     // but let's not over-complicate stuff for demonstration purposes
+
+     // at the end of the page there is the corresponding xml view as a comment
+    sap.ui.localResources("view");
+
+    var page = sap.ui.view({
+      id: "idMain",
+      viewName: "view.main",
+      type: sap.ui.core.mvc.ViewType.XML
+    });
+
+   page.placeAt("content");
+  </script>
+  </head>
+
+  <body class="sapUiBody" role="application">
+    <div id="content"></div>
+  </body>
+
+</html>

@@ -1,0 +1,164 @@
+<mvc:View controllerName="navigationjson.controller.View1"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<App id="app">
+
+		<Page title="SRM Application">
+			<l:BlockLayout background="Light">
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<l:HorizontalLayout id="ready" visible="true"
+							class="sapUiSmallMargin">
+							<Text text="{i18n>srmOverview}" class="sapUiTinyMarginEnd" />
+						</l:HorizontalLayout>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<FlexBox justifyContent="Center"
+							class="sapUiSmallMarginBottom">
+							<Button icon="sap-icon://sap-ui5" text="Home Page"
+								press=".onPress" type="Emphasized" class="sapUiSmallMargin" />
+						</FlexBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+			</l:BlockLayout>
+		</Page>	
+
+
+		<Page id="intro" title="Get SRM Part details">
+
+			<Panel headerText="{i18n>panel1HeaderText}"	class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<Label text="{i18n>firstName}" class="sapUiSmallMargin" />
+					<Input value="{/firstName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}" />
+					<Label text="{i18n>lastName}" class="sapUiSmallMargin" />
+					<Input value="{/lastName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}" />
+					<CheckBox selected="{/enabled}" text="Enabled" />
+				</content>
+			</Panel>
+			
+			<Panel headerText="{i18n>panel3HeaderText}"	class="sapUiResponsiveMargin" width="auto">
+				<content>
+					<List headerText="{i18n>productListTitle}"	items="{products>/Products}">
+						<items>
+							<ObjectListItem title="{products>ProductName}"
+								number="{
+							parts: [
+								{path: 'products>UnitPrice'},
+								{path: '/currencyCode'}
+							],
+							type: 'sap.ui.model.type.Currency',
+							formatOptions: { showMeasure: false }
+							}"
+								numberUnit="{/currencyCode}">
+								<attributes>
+									<ObjectAttribute	text="{products>QuantityPerUnit}" />
+									<ObjectAttribute title="{i18n>stockValue}"
+										text="{
+									parts: [
+										{path: 'products>UnitPrice'},
+										{path: 'products>UnitsInStock'},
+										{path: '/currencyCode'}
+									],
+									formatter: '.formatStockValue'
+								}" />
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Panel>
+
+		<Panel headerText="{i18n>panel3HeaderText}"	class="sapUiResponsiveMargin" width="auto">
+			<content>
+				<Table class="sapUiSizeCompact" id="table1" includeItemInSelection="true" items="{path: 'DataModel>/Objects'}"
+				mode="MultiSelect" selectionChange="onselectionChange">
+					<columns>
+					
+					<Column>
+						<Label text="Product Name" />
+					</Column>
+					<Column>
+						<Label text="Supplier" />
+					</Column>
+					<Column>
+						<Label text="Price" />
+					</Column>
+					<Column>
+						<Label text="Units Ordered" />
+					</Column>
+					
+				</columns>
+				
+				<ColumnListItem press="onPress" type="Navigation">
+					<Text text="{DataModel>Name}"></Text>
+					<Text text="{DataModel>Supplier}"></Text>
+					<Text text="{DataModel>Price}"></Text>
+					<Text text="{DataModel>Units}"></Text>
+				</ColumnListItem>
+				
+			</Table>
+		</content>
+	</Panel>
+	
+	<!-- ============================================From REST Service========================================================================== -->
+	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Table class="sapUiSizeCompact" id="table11" includeItemInSelection="true" items="{path: 'weatherDataModel>/'}"	>
+					<columns>
+					
+					<Column>
+						<Label text="Name" />
+					</Column>
+					<Column>
+						<Label text="Description" />
+					</Column>
+					<Column>
+						<Label text="Latitude" />
+					</Column>
+					<Column>
+						<Label text="Pressure" />
+					</Column>
+					<Column>
+						<Label text="Humidity" />
+					</Column>
+					<Column>
+						<Label text="icon" />
+					</Column>
+					<Column>
+						<Label text="Sunrise" />
+					</Column>		
+					<Column>
+						<Label text="Speed" />
+					</Column>							
+					
+					
+				</columns>
+				
+				<ColumnListItem >
+					<Text text="{weatherDataModel>name}"></Text>
+					<Text text="{weatherDataModel>description}"></Text>
+					<Text text="{weatherDataModel>lat}"></Text>
+					<Text text="{weatherDataModel>pressure}"></Text>
+					<Text text="{weatherDataModel>humidity}"></Text>
+					<Text text="{weatherDataModel>icon}"></Text>
+					<Text text="{weatherDataModel>sunrise}"></Text>	
+					<Text text="{weatherDataModel>speed}"></Text>					
+				</ColumnListItem>
+				
+			</Table>
+		</content>
+	</Panel>	
+	<!-- ======================================================================================================================================== -->
+	
+	
+		</Page>
+
+	</App>
+</mvc:View>

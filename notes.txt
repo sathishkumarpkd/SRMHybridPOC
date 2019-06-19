@@ -1,0 +1,77 @@
+﻿SAPUI5 is a set of libraries which is used to build Responsive web applications. Responsive web applications are those which are built once and can be run on multiple devices like Desktop, Mobile and Tablet, etc. SAPUI5 works on the concept of MVC to create separation between Data, Business Logic and Representation of Data on View.
+
+A Component is a piece of working code that is reused wherever required. There are 2 types of components provided by SAPUI5
+
+UI Components – These represent a user interface containing UI elements. These are based on SPAUI5 Class called sap.ui.core.UIComponent
+Faceless Components – These do not have a user interface. These are based on SAPUI5 class called sap.ui.core.Component
+=========================
+
+Sap UI5 developed on 2013.(JQuery,HTML5,css,and JS)
+Fiory application is designed using SapUI5 frontend and ABAP backend.
+
+Compatible with all kinds of devices,Responsive and can access native capabilities like GPS,Camera etc...
+Supports all Data modelling and Data binding.
+
+Common SAP libs supported in desktop nand mobile.
+sap.m.button
+
+Hello World : with out sap lib, with sap lib
+<meta charset="utf-8" content="IE-Edge"> // latest internet explorer
+
+	<script>
+		var oText = new sap.m.Text("idText",{text:"Hello World"});
+		oText.placeAt("contentDiv")	;
+	</script> 
+	
+//Split application demo.
+//Project structuring.
+
+Root folder -> webapp ->test.
+Root folder contains all project settings.
+webapps ,define controllers, View, etc.. with start from index.html,Component.js(contains metadata info),manifest.json: app descriptor of project .
+
+View : except js view ,all other view logic is not written.
+Controller : contains all logic.
+css and images.
+Model:Model are created , includes grouping, filtering data formatting etc..
+Mock server : emulate OData services for tests.
+
+Life cycle of controller:
+onInit(),onExit(),onAfterRendering(),onBeforeRendering()
+
+Model manages the application data.
+types:
+- JSON model,XML model and Resource model(i18N) :- Client side models 
+- OData model : Server side model.
+
+Create the model,its instance, Bind the properties.
+
+3 binding types:
+Property binding (Table control),Aggregation binding(List view) and Element Binding(Text control).
+Example: on jSON Binding.
+-	Create json file within models folder.(data.json)
+-	Define list view in the view
+-	Instantiate json model
+-	Bind the list control to json model.
+
+Use JSONLint to validate json file.
+
+Navigation:
+
+- 3 : shell based,event bus and routing.
+Intra application navi (1 and 2)
+
+Routing cater for bookmark and resume UI state.
+
+Routing is better than Navigation,
+navigate back with browser history.
+pass on data via the hash to application logic.
+
+- Define router class.
+- Initialize and register router class.
+- Define the routes (manifets.json)
+- Define the navigation in controllers.
+
+	
+https://github.com/sathishkumarpkd/SRMHybridPOC.git
+https://github.com/imvk001/debugging_ui5_demo.git
