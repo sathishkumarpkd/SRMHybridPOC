@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="WeatherForecast" path="/WeatherForecast" reloadable="true" source="org.eclipse.jst.jee.server:WeatherForecast"/></Host>
+      <Context docBase="AggregationBindingUsingTemplates" path="/AggregationBindingUsingTemplates" reloadable="true" source="org.eclipse.jst.jee.server:AggregationBindingUsingTemplates"/></Host>
     </Engine>
   </Service>
 </Server>

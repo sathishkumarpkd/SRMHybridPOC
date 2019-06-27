@@ -74,4 +74,69 @@
 			</List>
 		</content>
 	</Panel>
+	<!-- ============================================From REST Service========================================================================== -->
+	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Table class="sapUiSizeCompact" id="table11" includeItemInSelection="true" items="{path: 'weatherDataModel>/'}"	>
+					<columns>
+					
+					<Column>
+						<Label text="Name" />
+					</Column>
+					<Column>
+						<Label text="Description" />
+					</Column>
+					<Column>
+						<Label text="Latitude" />
+					</Column>
+					<Column>
+						<Label text="Pressure" />
+					</Column>
+					<Column>
+						<Label text="Humidity" />
+					</Column>
+					<Column>
+						<Label text="icon" />
+					</Column>
+					<Column>
+						<Label text="Sunrise" />
+					</Column>		
+					<Column>
+						<Label text="Speed" />
+					</Column>							
+					
+					
+				</columns>
+				
+				<ColumnListItem >
+					<Text text="{weatherDataModel>name}"></Text>
+					<Text text="{weatherDataModel>description}"></Text>
+					<Text text="{weatherDataModel>lat}"></Text>
+					<Text text="{weatherDataModel>pressure}"></Text>
+					<Text text="{weatherDataModel>humidity}"></Text>
+					<Text text="{weatherDataModel>icon}"></Text>
+					<Text text="{weatherDataModel>sunrise}"></Text>	
+					<Text text="{weatherDataModel>speed}"></Text>					
+				</ColumnListItem>
+				
+			</Table>
+		</content>
+	</Panel>	
+	<!-- ======================================================================================================================================== -->
+	<!-- ============================================From SRM REST Service========================================================================== -->
+	<Panel headerText="SRM Rest service" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Table class="sapUiSizeCompact" id="table111" includeItemInSelection="true" items="{path: 'oSRMModel>/'}"	>
+					<columns>					
+						<Column>
+							<Label text="Name" />
+						</Column>					
+					</columns>	
+					<ColumnListItem >
+						<Text text="{oSRMModel>@name}"></Text>								
+					</ColumnListItem>				
+			</Table>
+		</content>
+	</Panel>
+	<!-- ======================================================================================================================================== -->
 </mvc:View>

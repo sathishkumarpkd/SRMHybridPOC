@@ -3,6 +3,23 @@
 	<App id="app">
 		<pages>
 			<Page navButtonPress="onNavBack" showNavButton="true" title="Tableview2">
+			
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Text text="Left text"></Text>
+				</contentLeft>
+
+				<contentMiddle>
+					<SearchField placeholder="my search"></SearchField>
+				</contentMiddle>
+
+				<contentRight>
+					<Button text="Action" type="Accept"></Button>
+				</contentRight>
+			</Bar>
+		</customHeader>
+			
 				<content>
 					<Table class="sapUiSizeCompact" id="abc" items="{path: 'navigationModel>/Objects'}">
 						<columns>

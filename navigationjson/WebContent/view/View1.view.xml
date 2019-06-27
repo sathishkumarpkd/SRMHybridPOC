@@ -157,6 +157,32 @@
 	</Panel>	
 	<!-- ======================================================================================================================================== -->
 	
+		<!-- ============================================From REST SRM Service========================================================================== -->
+	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Table class="sapUiSizeCompact" id="table111" includeItemInSelection="true" items="{path: 'srmDataModel>/getSachstammDetailsResponse'}"	>
+					<columns>
+					
+					<Column>
+						<Label text="Name" />
+					</Column>
+					<Column>
+						<Label text="Name21" />
+					</Column>
+					
+				</columns>
+				
+				<ColumnListItem >
+					<Text text="{srmDataModel>@name}"></Text>		
+					<Text text="{srmDataModel>getSachstammDetailsResponse>/container>/object>@name}"></Text>					
+									
+				</ColumnListItem>
+				
+			</Table>
+		</content>
+	</Panel>	
+	<!-- ======================================================================================================================================== -->
+	
 	
 		</Page>
 

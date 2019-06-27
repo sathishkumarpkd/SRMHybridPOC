@@ -12,8 +12,12 @@ sap.ui.define([
 			
 			/*this below code for get the JSON Model form Manifest.json file*/
 			var weatherModel = this.getOwnerComponent().getModel("weather");
-			console.log(weatherModel)
+			//console.log(weatherModel)
 			this.getView().setModel(weatherModel, "weatherDataModel");
+			
+			var srmModel = this.getOwnerComponent().getModel("srmModel");
+			console.log(srmModel)
+			this.getView().setModel(srmModel, "srmDataModel");
 
 		},
 		onPress: function () {

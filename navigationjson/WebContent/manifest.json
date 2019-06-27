@@ -26,6 +26,10 @@
 			"weather_alias": {
 				"uri": "http://api.openweathermap.org/data/2.5/weather?q=London,uk&mode=json&units=metric&callback=?&APPID=98889cbd029f06ac7ad810ad72b5ac64",
 				"type": "JSON"
+			},
+			"srm_alias": {
+				"uri": "https://linkedeng-api-int.app.corpintra.net/rest/srm/v3/partdetails?Identnummer=QEV111AHVAJT",
+				"type": "JSON"
 			}	
 		}
 	},
@@ -122,8 +126,18 @@
 			},
 			"weather":{
 				"type": "sap.ui.model.json.JSONModel",
-				"dataSource": "weather_alias"
-			}
+				"dataSource": "weather_alias"			
+			},
+			"srmModel": {
+				"type": "sap.ui.model.json.JSONModel",
+        		"datasource": "srm_alias",
+        		"settings": {
+          			"headers": {
+             			"Cookie":"SMSESSION=/F7BzipoiXrVtEG9qD4a7Zpt9lgyDAxa2hap9mjUflUjQNsBIeKkcRoC1DMRc5nVSHCbeT8RWEWTd7/kAeVD61/mmk1//5eyGyc1fx4129ghm1NNBuUeHtW6Aa+zwS1W/gVMJn6eEc44zsGEcpOKYc0Y0Y3wZ5ZzhZIbASXJIPq0eqs30KKw8kBmFMiIoK/whNxAYiBe72decs1q1Tm8nAECJJT4fQ8J2zBM064B5C7Y8DmZ/3XjGy4pKO/t3Ook8nDkFXidgXU8eAjEdMlbban8me6PRonwT0gsVYmvFPbBXkKWvPxakf+aGdmieFrCphV/2vRiTsLyK0RH6TWlOC1InwHA7tvsE1McewQFBccuUpTXA2qRk1aR0+tiORQJaw8JAwp36louP5hIHHhByNEw3zmY8OF80xhw30XOeFrIi0gOgiUX0Jgjua8vAOjyNU9nUSW5Bku2HtcD2sB0uFlOqNbO+a+tWb1fXyHzkbO2IhI9qlAAkjqoJxRWPPciN9aCueLO6bs8nfBGcVvCzZj5ylLEln2UuUpgVDBvIRXHFyKDiEnU4LwasWcTFZY2ZcgetQBQ+J32GZ4OyVQTvPcSwgiN9fQXlaXtWSLlF3nSmrbVgtY/ujobGHYzzCsuhD5Mkg1J8BnGV0yhyx0rZSpcx7LPBOfGklGYwUfSAwWgIH5jF81XTmE+ioudp6IDPq4qwBB+9eIYDhpPF53zefVsf8jGsIoIRfKpmII/5QhkbDuhKR5s3iDxPCPcm6fRb2OdzHWGfrUia6Uy+20N3riQKCiHKHKM9T4NxQQlxqNOAJW2Ojmi5jeULM1MQfO5ZDtV72RroDZYU/Ds+B6geB1gkc28xom8lAhRmgf1pz4oWCoZim2YrHUJ7SyQZ5rI0VoN2qFijMz/y1bFP+TdPpZf5kUihCZhpg7PA/yqJrcd9iSWybB/llRmxnVLhbosupAS4tPfibXfH0uU5l0gMbFbJ33L09WUdm8/NGGRIwmtYraCBmKSNOL2FXCvZErvo0vHq52O04JU2V2BrVJCS3vPhS1+sIfBcQJK4mdDML8CVp91uADKXDuCYMsVUiro/wfy0a77stGchVgouBzEqBD/2ULiSZz7dsIrcuA0jsMUAqW66Y7GJ5k4u5+kniRkIr6I7GaziuU9nTNuYgYwHW6OQ3JSR1e3",
+             			"AppToken":"1c08c471-f601-463c-a291-ff2fe70d4851#b59f99ac20f6157f01211672850000d5"
+          			}
+        		}
+     		}
 		},
 		"resources": {
 			"css": [
