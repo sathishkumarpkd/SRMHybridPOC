@@ -1,8 +1,0 @@
-{ "DATA":
-      { "GROUPS":[  
-                   {"NAME": "Béatrice", "AGE": 5},
-                   {"NAME": "Alban",    "AGE": 8},
-                   {"NAME": "Corentin", "AGE": 2}
-                 ]
-      } 
-}      

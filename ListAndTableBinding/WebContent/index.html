@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    
-    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
-            id="sap-ui-bootstrap" 
-            data-sap-ui-resourceroots='{"view": "./"}' 
-            data-sap-ui-theme="sap_bluecrystal" 
-            data-sap-ui-xx-bindingsyntax="complex">
-    </script>
-   
-  
-    <script>
-    // Best practice would be to set this stuff up in an Component.js
-     // but let's not over-complicate stuff for demonstration purposes
-     // at the end of the page there is the corresponding xml view as a comment
-    sap.ui.localResources("view");
-
-    var page = sap.ui.view(
-    			{id: "idMain",viewName: "view.main",type: sap.ui.core.mvc.ViewType.XML }
-    			);
-
-   page.placeAt("content");
-  </script>
-  </head>
-
-  <body class="sapUiBody" role="application">
-    <div id="content"></div>
-  </body>
-
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data Binding Tutorial</title>
+	<script id="sap-ui-bootstrap"
+		src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-libs="sap.m,sap.ui.layout, sap.tnt"
+		data-sap-ui-resourceroots='{
+			"sap.ui.demo.db": "./"
+		}'		
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true">
+	</script>
+	<script src="index.js"></script>
+</head>
+<body class="sapUiBody" id="content"></body>
 </html>

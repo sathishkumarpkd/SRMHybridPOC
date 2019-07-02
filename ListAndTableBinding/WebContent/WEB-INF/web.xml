@@ -5,7 +5,7 @@
 		version="2.5"
 		xmlns="http://java.sun.com/xml/ns/javaee">
 
-	<display-name>ListAndTableBinding</display-name>
+	<display-name>SampleProject</display-name>
 
 	<!-- ============================================================== -->
 	<!-- UI5 resource servlet used to handle application resources      -->

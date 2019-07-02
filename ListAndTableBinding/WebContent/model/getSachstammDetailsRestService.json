@@ -1,0 +1,645 @@
+{"getSachstammDetailsResponse": {"container": {"object": {
+   "@id": "5f1e4a2c50327cf2a57b3543ba065733",
+   "@name": "SachstammDetails",
+   "@class": "SachstammDetails",
+   "attribute":    {
+      "@name": "IDENTS",
+      "$": "QEV111AHVAJT"
+   },
+   "object":    {
+      "@id": "4165b7b8d1a468f943c3a95de4733980",
+      "@name": "Grunddaten",
+      "@class": "Grunddaten",
+      "attribute":       [
+                  {
+            "@name": "SACHNUMMER",
+            "$": "A9072401900"
+         },
+                  {
+            "@name": "ES1",
+            "$": 5100
+         },
+         {"@name": "ES2"},
+         {"@name": "ERFASSUNGSSPRACHE"},
+                  {
+            "@name": "PRAEFIX",
+            "$": "ZB"
+         },
+                  {
+            "@name": "USERID-ERFASSER",
+            "$": "MG00AKHE"
+         },
+         {"@name": "USERID-AENDERER"},
+         {"@name": "WAVE-TEILEGRUPPE-IDENT"},
+         {"@name": "LOCAL-CONTENT"},
+                  {
+            "@name": "PRODUKTGRUPPE-ID",
+            "$": "CAAAAFX3"
+         },
+         {"@name": "ECU"},
+         {"@name": "ZGS"},
+                  {
+            "@name": "KEM",
+            "$": "KPX100118N06"
+         },
+                  {
+            "@name": "AENDERUNGSSTAND",
+            "$": "001"
+         },
+         {"@name": "SIEHE-SACHNUMMER"},
+                  {
+            "@name": "ANLAGEDATUM",
+            "$": "11.01.2018"
+         },
+         {"@name": "WERKSTOFFBEZEICHNUNG"}
+      ],
+      "object":       [
+                  {
+            "@id": "a1abf0c8eadf3ff4b7ea26024b5a2565",
+            "@name": "BenennungMSPListe",
+            "@class": "BenennungMSPListe",
+            "object":             [
+                              {
+                  "@id": "efa79fde5f0f3bdfe5e35c0ff7a466fe",
+                  "@name": "BenennungMSPPosition",
+                  "@class": "BenennungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                                          {
+                        "@name": "BENENNUNG-TEIL",
+                        "$": "GETRIEBETRAEGER"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "784505515d557c497d76bd1cff31973a",
+                  "@name": "BenennungMSPPosition",
+                  "@class": "BenennungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                                          {
+                        "@name": "BENENNUNG-TEIL",
+                        "$": "TRANSMISSION CARRIER"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "d65dd8573af3bfdb09e4abe51ca4dd53",
+                  "@name": "BenennungMSPPosition",
+                  "@class": "BenennungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                                          {
+                        "@name": "BENENNUNG-TEIL",
+                        "$": "SUPPORT DE BOITE DE VITESSES"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "4471906b058c13d94f590200e069fd74",
+                  "@name": "BenennungMSPPosition",
+                  "@class": "BenennungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                                          {
+                        "@name": "BENENNUNG-TEIL",
+                        "$": "SUPORTE DA TRANSMISSAO"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "12d22e5e3b9e75e074d579a3c0452a53",
+                  "@name": "BenennungMSPPosition",
+                  "@class": "BenennungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                                          {
+                        "@name": "BENENNUNG-TEIL",
+                        "$": "SOPORTE CAJA DE CAMBIOS"
+                     }
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "4b4a223258fce8609c28dbdae56dd562",
+            "@name": "BezeichnungMSPListe",
+            "@class": "BezeichnungMSPListe",
+            "object":             [
+                              {
+                  "@id": "15cdc6ff60b28a5ae138f9e81ea6654d",
+                  "@name": "BezeichnungMSPPosition",
+                  "@class": "BezeichnungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                                          {
+                        "@name": "BEZEICHNUNG",
+                        "$": "GETRIEBETRAEGER"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "eb82a386aeb3af9ffd15aa7d2f395384",
+                  "@name": "BezeichnungMSPPosition",
+                  "@class": "BezeichnungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                     {"@name": "BEZEICHNUNG"}
+                  ]
+               },
+                              {
+                  "@id": "eaade4071134fe1f433b9f115f95dab4",
+                  "@name": "BezeichnungMSPPosition",
+                  "@class": "BezeichnungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                     {"@name": "BEZEICHNUNG"}
+                  ]
+               },
+                              {
+                  "@id": "59671f0249a33cbe1fdd4a3df997b0e2",
+                  "@name": "BezeichnungMSPPosition",
+                  "@class": "BezeichnungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                     {"@name": "BEZEICHNUNG"}
+                  ]
+               },
+                              {
+                  "@id": "6b045272dc3871d953ccb1fea8e3e2a8",
+                  "@name": "BezeichnungMSPPosition",
+                  "@class": "BezeichnungMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                     {"@name": "BEZEICHNUNG"}
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "b05a23c1fe54cb3e51ff367f8ee99e91",
+            "@name": "NormbezKurzbezErwbenMSPListe",
+            "@class": "NormbezKurzbezErwbenMSPListe",
+            "object":             [
+                              {
+                  "@id": "f151a443c8ac881cd990dc23b573fb4c",
+                  "@name": "NormbezKurzbezErwbenMSPPosition",
+                  "@class": "NormbezKurzbezErwbenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                     {"@name": "NORMBEZ/KURZBEZ/ERWBEN"}
+                  ]
+               },
+                              {
+                  "@id": "1be0bc3622eb5cdeb7b49016f43447dc",
+                  "@name": "NormbezKurzbezErwbenMSPPosition",
+                  "@class": "NormbezKurzbezErwbenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                     {"@name": "NORMBEZ/KURZBEZ/ERWBEN"}
+                  ]
+               },
+                              {
+                  "@id": "16b5a67c3a0492cbe4d154e9daad9c69",
+                  "@name": "NormbezKurzbezErwbenMSPPosition",
+                  "@class": "NormbezKurzbezErwbenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                     {"@name": "NORMBEZ/KURZBEZ/ERWBEN"}
+                  ]
+               },
+                              {
+                  "@id": "b8951cad733ddcf6c9e717fdbb8b4ac6",
+                  "@name": "NormbezKurzbezErwbenMSPPosition",
+                  "@class": "NormbezKurzbezErwbenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                     {"@name": "NORMBEZ/KURZBEZ/ERWBEN"}
+                  ]
+               },
+                              {
+                  "@id": "fbb223a5586b08b5ebd88ca78cba5fca",
+                  "@name": "NormbezKurzbezErwbenMSPPosition",
+                  "@class": "NormbezKurzbezErwbenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                     {"@name": "NORMBEZ/KURZBEZ/ERWBEN"}
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "bb9f143db0b63ea108bd8bdb3f5e2e2b",
+            "@name": "ProduktgruppenMSPListe",
+            "@class": "ProduktgruppenMSPListe",
+            "object":             [
+                              {
+                  "@id": "696979d9214b498d5a67b53a617a8b4b",
+                  "@name": "ProduktgruppenMSPPosition",
+                  "@class": "ProduktgruppenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                                          {
+                        "@name": "PRODUKTGRUPPE-BENENNUNG",
+                        "$": "LAGERBOECKE, TRAGARME MOTOR (SEITL.)"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "eaf58304a106564db4c8458c19866a06",
+                  "@name": "ProduktgruppenMSPPosition",
+                  "@class": "ProduktgruppenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                                          {
+                        "@name": "PRODUKTGRUPPE-BENENNUNG",
+                        "$": "BEARING BRACKETS, SUPP. ARMS ENGINE (SIDE)"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "f0728f66194f3b5e4ebe97e0b05f79f1",
+                  "@name": "ProduktgruppenMSPPosition",
+                  "@class": "ProduktgruppenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                                          {
+                        "@name": "PRODUKTGRUPPE-BENENNUNG",
+                        "$": "SUPPORTS MOTEUR"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "3a342aed13fec3687aa8b2f404ac2be4",
+                  "@name": "ProduktgruppenMSPPosition",
+                  "@class": "ProduktgruppenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                                          {
+                        "@name": "PRODUKTGRUPPE-BENENNUNG",
+                        "$": "SUPORTES DO MOTOR"
+                     }
+                  ]
+               },
+                              {
+                  "@id": "79cc2fd34723a8b97cab96ba79ad58da",
+                  "@name": "ProduktgruppenMSPPosition",
+                  "@class": "ProduktgruppenMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                                          {
+                        "@name": "PRODUKTGRUPPE-BENENNUNG",
+                        "$": "SOPORTES DEL MOTOR"
+                     }
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "85e11eea9521f13a9ce3fcefa84a33f7",
+            "@name": "BTV",
+            "@class": "BTV",
+            "attribute":             [
+                              {
+                  "@name": "BTV-CD-USERID",
+                  "$": "APASTUK"
+               },
+                              {
+                  "@name": "BTV-NAME",
+                  "$": "PASTUKHOV"
+               },
+                              {
+                  "@name": "BTV-VORNAME",
+                  "$": "ANATOLIY"
+               },
+                              {
+                  "@name": "BTV-ABTEILUNG",
+                  "$": "VAN/ESM"
+               },
+                              {
+                  "@name": "BTV-WERK",
+                  "$": "019"
+               },
+                              {
+                  "@name": "BTV-TELEFON",
+                  "$": "07111753204"
+               },
+               {"@name": "BTV-SMARAGDBESTAETIGUNG"}
+            ]
+         },
+                  {
+            "@id": "50d96aa1296d723b0fd475c5c3adc61b",
+            "@name": "BestelltexteMSPListe",
+            "@class": "BestelltexteMSPListe",
+            "object":             [
+                              {
+                  "@id": "35e8fcadd55bf5cd46be47886b0e7557",
+                  "@name": "BestelltexteMSPPosition",
+                  "@class": "BestelltexteMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                     {"@name": "BESTELLTEXT"}
+                  ]
+               },
+                              {
+                  "@id": "6e3745669ca1df4dc2f631963c21f882",
+                  "@name": "BestelltexteMSPPosition",
+                  "@class": "BestelltexteMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                     {"@name": "BESTELLTEXT"}
+                  ]
+               },
+                              {
+                  "@id": "7759f2c36d2cf1edd95ddeb824407829",
+                  "@name": "BestelltexteMSPPosition",
+                  "@class": "BestelltexteMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                     {"@name": "BESTELLTEXT"}
+                  ]
+               },
+                              {
+                  "@id": "dfa6a4d09798e704a030c0b07bf25dc0",
+                  "@name": "BestelltexteMSPPosition",
+                  "@class": "BestelltexteMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                     {"@name": "BESTELLTEXT"}
+                  ]
+               },
+                              {
+                  "@id": "a8cb301c1f0db6b2e08f24f9b71d4cfd",
+                  "@name": "BestelltexteMSPPosition",
+                  "@class": "BestelltexteMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                     {"@name": "BESTELLTEXT"}
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "a85f4bd6fb480a62917ea5a22ba7e592",
+            "@name": "BestellinfoMSPListe",
+            "@class": "BestellinfoMSPListe",
+            "object":             [
+                              {
+                  "@id": "80feac031dad9535de85597b1d2e74dc",
+                  "@name": "BestellinfoMSPPosition",
+                  "@class": "BestellinfoMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "DE"
+                     },
+                     {"@name": "BESTELLINFO"}
+                  ]
+               },
+                              {
+                  "@id": "d040d6b42d137ecf18adef4c2490773b",
+                  "@name": "BestellinfoMSPPosition",
+                  "@class": "BestellinfoMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "EN"
+                     },
+                     {"@name": "BESTELLINFO"}
+                  ]
+               },
+                              {
+                  "@id": "bb300b3402f077327b91fb35d9038fbf",
+                  "@name": "BestellinfoMSPPosition",
+                  "@class": "BestellinfoMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "FR"
+                     },
+                     {"@name": "BESTELLINFO"}
+                  ]
+               },
+                              {
+                  "@id": "f6e982b2529cf6704f00f54c0f950267",
+                  "@name": "BestellinfoMSPPosition",
+                  "@class": "BestellinfoMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "SP"
+                     },
+                     {"@name": "BESTELLINFO"}
+                  ]
+               },
+                              {
+                  "@id": "5894a44d7086ef836153b2888bab35ad",
+                  "@name": "BestellinfoMSPPosition",
+                  "@class": "BestellinfoMSPPosition",
+                  "attribute":                   [
+                                          {
+                        "@name": "languageID",
+                        "$": "PO"
+                     },
+                     {"@name": "BESTELLINFO"}
+                  ]
+               }
+            ]
+         },
+                  {
+            "@id": "42e4d2caf6cc9f8cf9cff4696a8fcfde",
+            "@name": "EE-Kategorie-Daten",
+            "@class": "EE-Kategorie-Daten",
+            "attribute":             [
+               {"@name": "EE-KATEGORIE"},
+               {"@name": "EE-KATEGORIE-BESCHREIBUNG"},
+               {"@name": "EE-SIGNIERKENNZEICHEN"},
+               {"@name": "EE-SIGNIERKENNZEICHEN-BESCHREIBUNG"},
+               {"@name": "EE-DAIMLER-KONFORM-FLASHBAR"},
+               {"@name": "EE-DAIMLER-KONFORM-FLASHBAR-BESCHREIBUNG"}
+            ]
+         },
+                  {
+            "@id": "cfd1229f80f1907fb9b47129bf8a841b",
+            "@name": "Modulkomponente",
+            "@class": "Modulkomponente",
+            "attribute":             [
+               {"@name": "MK-ID"},
+               {"@name": "MK-BENENNUNG"},
+               {"@name": "MSK-ID"},
+               {"@name": "MSK-BENENNUNG"}
+            ]
+         },
+                  {
+            "@id": "87950b8c707a52028c528de854e5133c",
+            "@name": "OPS-FM-Daten",
+            "@class": "OPS-FM-Daten",
+            "attribute":             [
+               {"@name": "OPS-FM-ID"},
+               {"@name": "OPS-FM-BENENNUNG"},
+               {"@name": "OPS-FM-SUFFIX-ID"},
+               {"@name": "OPS-FM-SUFFIX-BENENNUNG"}
+            ]
+         },
+                  {
+            "@id": "79c96cb1b972c601532c1eb170b48924",
+            "@name": "ET-Term-Daten",
+            "@class": "ET-Term-Daten",
+            "attribute":             [
+                              {
+                  "@name": "ET-TERM-ID-PROPOSAL",
+                  "$": 500004642
+               },
+                              {
+                  "@name": "ET-TERM-ID",
+                  "$": "000000000"
+               }
+            ]
+         },
+                  {
+            "@id": "646595072c0724ff14809f678643bbed",
+            "@name": "KF-Daten",
+            "@class": "KF-Daten",
+            "attribute":             [
+                              {
+                  "@name": "KF",
+                  "$": "NC"
+               },
+                              {
+                  "@name": "KF-LANGTEXT",
+                  "$": "NCV TRANSPORTERDOKUMENTATION IM SYSTEM DIALOG"
+               }
+            ]
+         },
+                  {
+            "@id": "c874f5884fac532e778a294192e4584f",
+            "@name": "Mengeneinheit",
+            "@class": "Mengeneinheit",
+            "attribute":             [
+                              {
+                  "@name": "MENGENEINHEIT-SCHLUESSEL",
+                  "$": "01"
+               },
+                              {
+                  "@name": "MENGENEINHEIT-LANGTEXT",
+                  "$": "STUECK"
+               }
+            ]
+         },
+                  {
+            "@id": "5d60f319faeeb69404b3ecb2a17c9342",
+            "@name": "Bestellbarkeit",
+            "@class": "Bestellbarkeit",
+            "attribute":             [
+                              {
+                  "@name": "BESTELLBARKEIT-SCHLUESSEL",
+                  "$": "01"
+               },
+                              {
+                  "@name": "BESTELLBARKEIT-LANGTEXT",
+                  "$": "BESTELLBAR"
+               }
+            ]
+         },
+                  {
+            "@id": "371aca857e11eaea3fc62deb9c38912e",
+            "@name": "Freigabestatus",
+            "@class": "Freigabestatus",
+            "attribute":             [
+               {"@name": "FREIGAESTATUS-SCHLUESSEL"},
+               {"@name": "FREIGABESTATUS-LANGTEXT"}
+            ]
+         },
+                  {
+            "@id": "0ae489ba46caba66dfcaa7f7954ab5b9",
+            "@name": "Teileart",
+            "@class": "Teileart",
+            "attribute":             [
+                              {
+                  "@name": "TEILEART-SCHLUESSEL",
+                  "$": "K"
+               },
+                              {
+                  "@name": "TEILEART-LANGTEXT",
+                  "$": "KONSTRUKT."
+               }
+            ]
+         }
+      ]
+   }
+}}}}

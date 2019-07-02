@@ -1,0 +1,47 @@
+<mvc:View
+	controllerName="sap.ui.demo.db.controller.App"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"	>
+	
+	<App id="app">
+	
+	<Page id="intro" title="Get SRM Part details">	
+	
+	<Panel headerText="Header" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<l:HorizontalLayout>
+				<l:VerticalLayout>
+					<Label class="sapUiSmallMargin" text="Header Parts details:"/>
+					<FormattedText class="sapUiSmallMarginBegin sapUiSmallMarginBottom" 
+					htmlText="{srmModel>/getSachstammDetailsResponse/container/object/attribute/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/attribute/$} &lt;br&gt;
+					 {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/0/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/0/$} &lt;br&gt;
+					  {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/1/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/1/$} &lt;br&gt;
+					   {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/2/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/2/$} &lt;br&gt;"
+					width="200px"/>					
+				</l:VerticalLayout>
+			</l:HorizontalLayout>
+		</content>
+	</Panel>
+<!-- ==================================================================================================== -->
+<!--  {srmModel>getSachstammDetailsResponse>container>object>object>object>/object>@name} -->
+	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<List headerText="{i18n>productListTitle}" items="{ path :'srmModel>/getSachstammDetailsResponse/container/object/object/object'}">
+				<items>
+					<ObjectListItem title="{srmModel>@name}">
+						<attributes>							
+								<ObjectAttribute text="{srmModel>object/0/@name}"/>
+								<ObjectAttribute text="{srmModel>object/0/attribute/1/@name}"/>
+								<ObjectAttribute text="{srmModel>object/0/attribute/1/$}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Panel>	
+<!-- ==================================================================================================== -->
+	</Page>
+	</App>
+</mvc:View>
