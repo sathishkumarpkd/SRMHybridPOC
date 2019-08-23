@@ -1,4 +1,4 @@
-sap.ui.require([
+sap.ui.require([	
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/XMLView",
 	"sap/ui/model/resource/ResourceModel"
@@ -33,10 +33,12 @@ sap.ui.require([
 		sap.ui.getCore().setModel(oModel);
 		
 		// for srm part details model.
-		var srmModel = new JSONModel();
-		srmModel.loadData("./model/getSachstammDetailsRestService.json");
-		//sap.ui.getCore().setModel(srmModel, "getSachstammDetailsRestService");
-		sap.ui.getCore().setModel(srmModel,"srmModel");
+//		var srmModel = new JSONModel();
+//		srmModel.loadData("./model/getSachstammDetailsRestService.json");
+		
+		/*var srmModel = new JSONModel();
+		srmModel.loadData("./model/SachstammDetailsRestNew.json");
+		sap.ui.getCore().setModel(srmModel,"srmModel");*/
 
 		var oResourceBundle = new ResourceModel({
 			bundleName: "sap.ui.demo.db.i18n.i18n"

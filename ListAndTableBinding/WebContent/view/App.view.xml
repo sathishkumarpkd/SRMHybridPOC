@@ -7,18 +7,53 @@
 	
 	<App id="app">
 	
+	<Page title="SRM Application">
+			<l:BlockLayout background="Light">
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<l:HorizontalLayout id="ready" visible="true"
+							class="sapUiSmallMargin">
+							<Text text="{i18n>srmOverview}" class="sapUiTinyMarginEnd" />
+						</l:HorizontalLayout>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<FlexBox justifyContent="Center"
+							class="sapUiSmallMarginBottom">
+							<Button icon="sap-icon://sap-ui5" text="Home Page"
+								press=".onPress" type="Emphasized" class="sapUiSmallMargin" />
+						</FlexBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+			</l:BlockLayout>
+	</Page>
+	
 	<Page id="intro" title="Get SRM Part details">	
 	
-	<Panel headerText="Header" class="sapUiResponsiveMargin" width="auto">
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+			<!-- 	has to define the search ".onFilterInvoices" in js component,with corresponding arguments passed to fn. -->
+					<SearchField placeholder="ident search"  width="30%" search=".onFilterInvoices"></SearchField>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+	
+	<Panel headerText="SachstammDetails" class="sapUiResponsiveMargin" width="auto">
 		<content>
 			<l:HorizontalLayout>
 				<l:VerticalLayout>
 					<Label class="sapUiSmallMargin" text="Header Parts details:"/>
 					<FormattedText class="sapUiSmallMarginBegin sapUiSmallMarginBottom" 
-					htmlText="{srmModel>/getSachstammDetailsResponse/container/object/attribute/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/attribute/$} &lt;br&gt;
-					 {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/0/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/0/$} &lt;br&gt;
-					  {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/1/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/1/$} &lt;br&gt;
-					   {srmModel>/getSachstammDetailsResponse/container/object/object/attribute/2/@name} :	{srmModel>/getSachstammDetailsResponse/container/object/object/attribute/2/$} &lt;br&gt;"
+					htmlText="{i18n>IDENTS} :	{srmModel>/SachstammDetails/IDENTS} &lt;br&gt;
+					 {i18n>SACHNUMMER} :	{srmModel>/SachstammDetails/Grunddaten/SACHNUMMER} &lt;br&gt;
+					 {i18n>ES1} :	{srmModel>/SachstammDetails/Grunddaten/ES1} &lt;br&gt;
+					 {i18n>ES2} :	{srmModel>/SachstammDetails/Grunddaten/ES2}"
 					width="200px"/>					
 				</l:VerticalLayout>
 			</l:HorizontalLayout>
@@ -28,19 +63,134 @@
 <!--  {srmModel>getSachstammDetailsResponse>container>object>object>object>/object>@name} -->
 	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
 		<content>
-			<List headerText="{i18n>productListTitle}" items="{ path :'srmModel>/getSachstammDetailsResponse/container/object/object/object'}">
+		<List
+		id="ShortProductList"
+		headerText="Grunddaten">
+		<items>
+			<StandardListItem
+				title="{i18n>PRODUKTGRUPPE-ID}"
+				description=""
+				icon="{0/ProductPicUrl}"
+				iconDensityAware="false"
+				iconInset="false"
+				adaptTitleSize="false"
+				info="{srmModel>/SachstammDetails/Grunddaten/PRODUKTGRUPPE-ID}" />		
+			<StandardListItem			
+				title="{i18n>BenennungMSPListe} > {i18n>BenennungMSPPosition}"
+				description="{i18n>BENENNUNG-TEIL}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/BenennungMSPListe/BenennungMSPPosition/0/BENENNUNG-TEIL}"/>	
+			<StandardListItem			
+				title="{i18n>BezeichnungMSPListe}"
+				description="{i18n>BEZEICHNUNG}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/BezeichnungMSPListe/BezeichnungMSPPosition/0/BEZEICHNUNG}"/>			
+			<StandardListItem			
+				title="{i18n>NormbezKurzbezErwbenMSPListe}"
+				description="{i18n>NORMBEZ_KURZBEZ_ERWBEN}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/NormbezKurzbezErwbenMSPListe/NormbezKurzbezErwbenMSPPosition/0/NORMBEZ_KURZBEZ_ERWBEN}"/>
+			<StandardListItem			
+				title="{i18n>ProduktgruppenMSPListe}"
+				description="{i18n>BENENNUNG-TEIL}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/ProduktgruppenMSPListe/ProduktgruppenMSPPosition/0/PRODUKTGRUPPE-BENENNUNG}"/>
+			<StandardListItem			
+				title="{i18n>BTV}"
+				description="{i18n>BTV-CD-USERID}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/BTV/BTV-CD-USERID}"/>	
+			<StandardListItem			
+				title="{i18n>BestelltexteMSPListe}"
+				description="{i18n>BESTELLTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/BestelltexteMSPListe/BestelltexteMSPPosition/0/BESTELLTEXT}"/>
+			<StandardListItem			
+				title="{i18n>BestellinfoMSPListe}"
+				description="{i18n>BESTELLINFO}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/BestellinfoMSPListe/BestellinfoMSPPosition/0/BESTELLINFO}"/>
+			<StandardListItem			
+				title="{i18n>EE-Kategorie-Daten}"
+				description="{i18n>EE-KATEGORIE}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/EE-Kategorie-Daten/EE-KATEGORIE}"/>
+			<StandardListItem			
+				title="{i18n>Modulkomponente}"
+				description="{i18n>MK-ID}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/Modulkomponente/MK-ID}"/>		
+			<StandardListItem			
+				title="{i18n>OPS-FM-Daten}"
+				description="{i18n>OPS-FM-ID}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/OPS-FM-Daten/OPS-FM-ID}"/>		
+			<StandardListItem			
+				title="{i18n>ET-Term-Daten}"
+				description="{i18n>ET-TERM-ID-PROPOSAL}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/ET-Term-Daten/ET-TERM-ID-PROPOSAL}"/>		
+			<StandardListItem			
+				title="{i18n>KF-Daten}"
+				description="{i18n>KF-LANGTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/KF-Daten/KF-LANGTEXT}"/>		
+			<StandardListItem			
+				title="{i18n>Mengeneinheit}"
+				description="{i18n>MENGENEINHEIT-LANGTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/Mengeneinheit/MENGENEINHEIT-LANGTEXT}"/>		
+			<StandardListItem			
+				title="{i18n>Bestellbarkeit}"
+				description="{i18n>BESTELLBARKEIT-LANGTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/Bestellbarkeit/BESTELLBARKEIT-LANGTEXT}"/>		
+			<StandardListItem			
+				title="{i18n>Freigabestatus}"
+				description="{i18n>FREIGABESTATUS-LANGTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/Freigabestatus/FREIGABESTATUS-LANGTEXT}"/>		
+			<StandardListItem			
+				title="{i18n>Teileart}"
+				description="{i18n>TEILEART-LANGTEXT}"
+				icon="{0/ProductPicUrl}"
+				info= "{srmModel>/SachstammDetails/Grunddaten/Teileart/TEILEART-LANGTEXT}"/>		
+			
+		</items>
+	</List>
+		</content>
+	</Panel>	
+<!-- ==================================================================================================== -->
+<!-- //@Deprecated... old json format is no more. -->
+<!-- ==================================================================================================== -->
+<!-- 	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<List headerText="{i18n>productListTitle}" class="sapUiSmallMargin" items="{ path :'srmModel>/getSachstammDetailsResponse/container/object/object/object'}">
 				<items>
 					<ObjectListItem title="{srmModel>@name}">
 						<attributes>							
-								<ObjectAttribute text="{srmModel>object/0/@name}"/>
-								<ObjectAttribute text="{srmModel>object/0/attribute/1/@name}"/>
-								<ObjectAttribute text="{srmModel>object/0/attribute/1/$}"/>
+								<ObjectAttribute text="{srmModel>object/0/@name}"/>								
 						</attributes>
+						
+						<firstStatus>
+							<ObjectStatus text="{
+							path: 'srmModel>object/0/attribute/1/@name',
+							formatter: '.formatter.statusText'}"
+							/>
+						</firstStatus>		
+						
+						<secondStatus>
+							<ObjectStatus text="{
+							path: 'srmModel>object/0/attribute/1/$',
+							formatter: '.formatter.statusText'}"
+							/>
+						</secondStatus>					
+						
 					</ObjectListItem>
 				</items>
 			</List>
 		</content>
-	</Panel>	
+	</Panel> -->	
 <!-- ==================================================================================================== -->
 	</Page>
 	</App>
